@@ -73,12 +73,22 @@ img{
         transform: translate(100,0%);
     De la izquierda
         transform: translate(-100,0%);
+
+    Si lo quisiésiemos con opacidad
+        opacity: 0;
+        transition: opacity 0.5s ease;
+
+
     */
     transition: transform .3s ease;
 }
 
 .panel.is-active{
     transform: translate(0,0);
+    /*
+    Y aquí:
+        opaicity: 1;
+    */
 }
 
 .panel-btn{
@@ -112,7 +122,7 @@ img{
     font-size: 1.rem;
     text-decoration: none;
     color: var(--main-color);
-    transition: all 0.3 ease;
+    transition: font-weith, color, background-color 0.3 ease;
 }
 
 .menu a:hover{
