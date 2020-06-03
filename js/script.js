@@ -7,5 +7,5 @@ d.addEventListener('DOMContentLoaded', e => {
 
     hamburguerMenu('.panel-btn', '.panel', '.menu a');
     digitalClock("#reloj", "#activar-reloj", "#desactivar-reloj");
-
+    alarm('../assests/alarma.mp3', '#activar-alarma', '#desactivar-alarma');
 });
