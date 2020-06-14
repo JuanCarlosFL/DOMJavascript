@@ -1,10 +1,13 @@
 import hamburguerMenu from "./menu_hamburguesa.js";
 import { digitalClock, alarm } from "./reloj.js";
 import scrollTopButton from "./boton_scroll.js";
+import { digitalClock, alarm } from "./reloj.js";
+import { shortcuts, moveBall } from "./teclado.js";
+import countdown from "./cuenta_regresiva.js";
 
 const d = document;
 
-d.addEventListener('DOMContentLoaded', e => {
+d.addEventListener('DOMContentLoaded', (e) => {
 
     hamburguerMenu('.panel-btn', '.panel', '.menu a');
     digitalClock("#reloj", "#activar-reloj", "#desactivar-reloj");
@@ -12,3 +15,10 @@ d.addEventListener('DOMContentLoaded', e => {
 
     scrollTopButton(".scroll-top-btn");
 });
+countdown('countdown', "Dec 26, 2020 12:00:00", "Feliz Cumpleaños 🤓");
+});
+
+d.addEventListener('keydown', (e) => {
+    shortcuts(e);
+    moveBall(e, ".ball", ".stage");
+})
