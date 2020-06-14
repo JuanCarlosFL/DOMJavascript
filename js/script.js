@@ -1,9 +1,9 @@
 import hamburguerMenu from "./menu_hamburguesa.js";
 import { digitalClock, alarm } from "./reloj.js";
 import scrollTopButton from "./boton_scroll.js";
-import { digitalClock, alarm } from "./reloj.js";
 import { shortcuts, moveBall } from "./teclado.js";
 import countdown from "./cuenta_regresiva.js";
+import darkTheme from "./tema_oscuro.js";
 
 const d = document;
 
@@ -14,9 +14,10 @@ d.addEventListener('DOMContentLoaded', (e) => {
     alarm('../assests/alarma.mp3', '#activar-alarma', '#desactivar-alarma');
 
     scrollTopButton(".scroll-top-btn");
+
+    darkTheme('.dark-theme-button', 'dark-mode');
 });
 countdown('countdown', "Dec 26, 2020 12:00:00", "Feliz Cumpleaños 🤓");
-});
 
 d.addEventListener('keydown', (e) => {
     shortcuts(e);
