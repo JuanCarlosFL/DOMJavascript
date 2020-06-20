@@ -15,7 +15,6 @@ d.addEventListener('DOMContentLoaded', (e) => {
 
     scrollTopButton(".scroll-top-btn");
 
-    darkTheme('.dark-theme-button', 'dark-mode');
 });
 countdown('countdown', "Dec 26, 2020 12:00:00", "Feliz Cumpleaños 🤓");
 
@@ -23,3 +22,5 @@ d.addEventListener('keydown', (e) => {
     shortcuts(e);
     moveBall(e, ".ball", ".stage");
 })
+
+darkTheme('.dark-theme-button', 'dark-mode');
